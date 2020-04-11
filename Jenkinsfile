@@ -6,14 +6,15 @@ pipeline {
         stage("Setup script") {
             steps {
                 sh """
-                    pip3 install pytest
+                    sudo pip3 install --upgrade pip
+                    sudo pip3 install pytest
                 """
             } //steps
         } //stage
         stage("Run unit tests") {
             steps {
                 sh """
-                    python3 -m pytest
+                    sudo python3 -m pytest
                 """
             } //steps
         } //stage
