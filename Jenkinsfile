@@ -6,6 +6,7 @@ pipeline {
         stage("Setup script") {
             steps {
                 sh """
+                    pip install --upgrade pip
                     pip install pytest
                 """
             } //steps
@@ -17,6 +18,13 @@ pipeline {
                 """
             } //steps
         } //stage
+        stage("Deploy to another server") {
+            steps {
+                sh """
+                # // Package into rpm and upload
+                """
+            }
+        }
     } //stages
     post {
         always {
