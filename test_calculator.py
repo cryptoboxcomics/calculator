@@ -9,3 +9,5 @@ def test_multiply():
     assert calculator.multiply(3, 3) == 9
 def test_divide():
     assert calculator.divide(9, 3) == 3
+def test_squared():
+    assert calculator.squared(2) == 4
