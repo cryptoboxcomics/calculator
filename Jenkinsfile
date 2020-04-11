@@ -29,7 +29,7 @@ pipeline {
     post {
         always {
             sh """
-                pip uninstall pytest -y
+                sudo pip uninstall pytest -y
             """
         } //always
     } //post
