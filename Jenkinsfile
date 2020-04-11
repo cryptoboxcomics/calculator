@@ -23,13 +23,13 @@ pipeline {
                 sh """
                 # // Package into rpm and upload
                 """
-            }
-        }
+            } //steps
+        } //stage
     } //stages
     post {
         always {
             sh """
-                # pip uninstall pytest -y
+                pip uninstall pytest -y
             """
         } //always
     } //post
